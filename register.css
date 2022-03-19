@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@600&display=swap");
+
+:root {
+    --color1: #fbbc01;
+}
+
+body {
+    background: linear-gradient(to right,
+            #fff 0%,
+            #fff 30%,
+            #fff16f 70%,
+            #fffab4 100%);
+    background-size: 200%;
+    animation: gba 20s infinite;
+}
+
+@keyframes gba {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.5rem;
+    color: #000;
+    font-size: 15px;
+}
+
+ul,
+ol,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.login {
+    background-color: #FFFEA9;
+    width: 100%;
+    max-width: 565px;
+    margin-top: 50px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 0 25px;
+    box-shadow: 8px 5px 5px grey;
+}
+
+.title-head {
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    margin: 30px 0 20px 0;
+    position: relative;
+}
+
+.title-head h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.title-head h1:after {
+    height: 2px;
+    width: 80px;
+    bottom: -2px;
+    left: 50%;
+    content: "";
+    transform: translateX(-50%);
+    background: red;
+    display: inline-block;
+    position: absolute;
+}
+
+.social {
+    /*position: relative;*/
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.social img,
+.social-register img {
+    width: 129px;
+    height: 37px;
+    margin: 0 13px;
+    transition: all 0.4s ease;
+}
+
+.social img:hover {
+    opacity: 0.8;
+}
+
+.form {
+    position: relative;
+    --heightinput: 60px;
+}
+
+.last-name,
+.first-name,
+.email,
+.pass,
+.repass {
+    position: relative;
+    margin: 20px 0;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0 20px;
+    height: var(--heightinput);
+}
+
+.form-input:focus {
+    outline-color: #ff0066;
+}
+
+.form-label {
+    position: absolute;
+    top: 30px;
+    transform: translateY(-50%);
+    left: 21px;
+    display: inline-block;
+    user-select: none;
+    pointer-events: none;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.form-input:not(:placeholder-shown)+.form-label,
+.form-input:focus+.form-label {
+    color: #ff0066;
+    padding: 0 10px;
+    background: #fff;
+    top: 0;
+    left: 11px;
+}
+
+.alert {
+    color: red;
+    padding: 0;
+}
+
+.login-btn,
+.register-btn {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-log,
+.btn-reg {
+    padding: 7px 20px;
+    background-color: #fff;
+    border: 1px solid #f72b3f;
+    color: #f72b3f;
+    display: inline-block;
+    transition: all 0.45s ease-in-out;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn-log:hover,
+.btn-reg:hover {
+    background: #f72b3f;
+    color: #fff;
+    /*font-weight: 500;*/
+}
+
+.forgot-pass {
+    display: inline-block;
+    color: #222;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: all 0.45s ease-in-out;
+}
+
+.forgot-pass:hover {
+    color: #f72b3f;
+    text-decoration: none;
+}
+
+.no-acc {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.no-acc a {
+    color: #999;
+    transition: all 0.45s ease-in-out;
+}
+
+.no-acc a:hover {
+    color: #f72b3f;
+    text-decoration: none;
+}
+
+/*End Login*/
+/*Start Register*/
+.social-register {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.register-btn {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-reg {
+    margin-right: 20px;
+}
